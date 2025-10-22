@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<name>COM_SERVICES</name>
+	<description>COM_SERVICES_DESCRIPTION</description>
+	
+	<!-- Services List View -->
+	<view title="COM_SERVICES_SERVICES_VIEW" layout="default" view="items">
+		<message>COM_SERVICES_SERVICES_VIEW_DESC</message>
+		<options var="params">
+			<fields name="params">
+				<fieldset name="basic" label="JGLOBAL_FIELDSET_BASIC">
+					<field 
+						name="show_page_heading" 
+						type="radio" 
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="JGLOBAL_SHOW_PAGE_HEADING_LABEL" 
+						description="JGLOBAL_SHOW_PAGE_HEADING_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field 
+						name="page_heading" 
+						type="text" 
+						label="JGLOBAL_PAGE_HEADING_LABEL" 
+						description="JGLOBAL_PAGE_HEADING_DESC" />
+						
+					<field 
+						name="page_title" 
+						type="text" 
+						label="JGLOBAL_PAGE_TITLE_LABEL" 
+						description="JGLOBAL_PAGE_TITLE_DESC" />
+						
+					<field 
+						name="show_intro_text" 
+						type="radio" 
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="COM_SERVICES_SHOW_INTRO_TEXT_LABEL" 
+						description="COM_SERVICES_SHOW_INTRO_TEXT_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field 
+						name="intro_text" 
+						type="textarea" 
+						rows="5" 
+						label="COM_SERVICES_INTRO_TEXT_LABEL" 
+						description="COM_SERVICES_INTRO_TEXT_DESC" />
+				</fieldset>
+				
+				<fieldset name="display" label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS">
+					<field 
+						name="services_per_page" 
+						type="number" 
+						default="20" 
+						min="1" 
+						max="100" 
+						label="COM_SERVICES_SERVICES_PER_PAGE_LABEL" 
+						description="COM_SERVICES_SERVICES_PER_PAGE_DESC" />
+						
+					<field 
+						name="show_search" 
+						type="radio" 
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="COM_SERVICES_SHOW_SEARCH_LABEL" 
+						description="COM_SERVICES_SHOW_SEARCH_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field 
+						name="show_filters" 
+						type="radio" 
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="COM_SERVICES_SHOW_FILTERS_LABEL" 
+						description="COM_SERVICES_SHOW_FILTERS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field 
+						name="show_featured_first" 
+						type="radio" 
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="COM_SERVICES_SHOW_FEATURED_FIRST_LABEL" 
+						description="COM_SERVICES_SHOW_FEATURED_FIRST_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field 
+						name="layout_type" 
+						type="list" 
+						default="default"
+						label="JGLOBAL_LAYOUT_LABEL" 
+						description="JGLOBAL_LAYOUT_DESC">
+						<option value="default">COM_SERVICES_LAYOUT_DEFAULT</option>
+						<option value="grid">COM_SERVICES_LAYOUT_GRID</option>
+						<option value="list">COM_SERVICES_LAYOUT_LIST</option>
+					</field>
+				</fieldset>
+			</fields>
+		</options>
+	</view>
+	
+	<!-- Single Service View -->
+	<view title="COM_SERVICES_SINGLE_SERVICE_VIEW" layout="default" view="item">
+		<message>COM_SERVICES_SINGLE_SERVICE_VIEW_DESC</message>
+		<options var="params">
+			<fields name="params">
+				<fieldset name="basic" label="JGLOBAL_FIELDSET_BASIC">
+					<field 
+						name="service_id" 
+						type="sql" 
+						default=""
+						query="SELECT id, title FROM #__services_items WHERE state = 1 ORDER BY title ASC"
+						key_field="id"
+						value_field="title"
+						label="COM_SERVICES_SELECT_SERVICE_LABEL" 
+						description="COM_SERVICES_SELECT_SERVICE_DESC">
+						<option value="">COM_SERVICES_SELECT_SERVICE_OPTION</option>
+					</field>
+					
+					<field 
+						name="show_page_heading" 
+						type="radio" 
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="JGLOBAL_SHOW_PAGE_HEADING_LABEL" 
+						description="JGLOBAL_SHOW_PAGE_HEADING_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				</fieldset>
+				
+				<fieldset name="display" label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS">
+					<field 
+						name="show_reviews" 
+						type="radio" 
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="COM_SERVICES_SHOW_REVIEWS_LABEL" 
+						description="COM_SERVICES_SHOW_REVIEWS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field 
+						name="show_contact_form" 
+						type="radio" 
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="COM_SERVICES_SHOW_CONTACT_FORM_LABEL" 
+						description="COM_SERVICES_SHOW_CONTACT_FORM_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+					
+					<field 
+						name="show_location_map" 
+						type="radio" 
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="COM_SERVICES_SHOW_LOCATION_MAP_LABEL" 
+						description="COM_SERVICES_SHOW_LOCATION_MAP_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				</fieldset>
+			</fields>
+		</options>
+	</view>
+</metadata>

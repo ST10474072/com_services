@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="5.0" method="upgrade">
+  <name>COM_SERVICES</name>
+  <element>com_services</element>
+  <creationDate>January 2024</creationDate>
+  <author>JBaylet Development</author>
+  <authorEmail>admin@jbaylet.com</authorEmail>
+  <authorUrl>https://jbaylet.com</authorUrl>
+  <copyright>Copyright (C) 2024 JBaylet Development. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <version>1.0.3</version>
+  <description>COM_SERVICES_DESCRIPTION</description>
+  <namespace path="src">Jbaylet\Component\Services</namespace>
+  <scriptfile>script.php</scriptfile>
+  
+  <!-- Site Files -->
+  <files folder="components/com_services">
+    <folder>src</folder>
+    <folder>tmpl</folder>
+    <folder>services</folder>
+    <folder>language</folder>
+    <filename>com_services.php</filename>
+    <filename>metadata.xml</filename>
+    <filename>router.php</filename>
+  </files>
+  
+  <!-- Administrator Files -->
+  <administration>
+    <menu img="class:icon-tools">COM_SERVICES_CUSTOM_TOOLS</menu>
+    <submenu>
+      <menu view="dashboard">COM_SERVICES_SERVICES_DASHBOARD</menu>
+      <menu view="items">COM_SERVICES_SERVICES</menu>
+      <menu view="reviews">COM_SERVICES_REVIEWS</menu>
+      <menu view="messages">COM_SERVICES_MESSAGES</menu>
+      <menu view="configuration">COM_SERVICES_OPTIONS</menu>
+    </submenu>
+    <files folder="administrator/components/com_services">
+      <folder>src</folder>
+      <folder>tmpl</folder>
+      <folder>services</folder>
+      <folder>language</folder>
+      <folder>forms</folder>
+      <folder>helpers</folder>
+      <folder>sql</folder>
+      <filename>access.xml</filename>
+      <filename>com_services.php</filename>
+    </files>
+  </administration>
+  
+  <!-- Media Files -->
+  <media destination="com_services" folder="media/com_services">
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>images</folder>
+  </media>
+  
+  <!-- Language Files -->
+  <languages folder="components/com_services/language">
+    <language tag="en-GB">en-GB/en-GB.com_services.ini</language>
+  </languages>
+  <languages folder="administrator/components/com_services/language">
+    <language tag="en-GB">en-GB/en-GB.com_services.ini</language>
+    <language tag="en-GB">en-GB/en-GB.com_services.sys.ini</language>
+  </languages>
+  <languages folder="administrator/language">
+    <language tag="en-GB">en-GB/en-GB.com_services.ini</language>
+    <language tag="en-GB">en-GB/en-GB.com_services.sys.ini</language>
+  </languages>
+  
+  <!-- SQL Files -->
+  <files folder="sql">
+    <folder>install</folder>
+    <folder>updates</folder>
+    <folder>uninstall</folder>
+  </files>
+  
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8mb4">sql/install/mysql/install.sql</file>
+    </sql>
+  </install>
+  
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8mb4">sql/uninstall/mysql/uninstall.sql</file>
+    </sql>
+  </uninstall>
+  
+  <update>
+    <schemas>
+      <schemapath type="mysql">sql/updates/mysql</schemapath>
+    </schemas>
+  </update>
+  
+</extension>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general" 
+              label="COM_SERVICES_CONFIG_GENERAL_LABEL"
+              description="COM_SERVICES_CONFIG_GENERAL_DESC">
+        
+        <field name="items_per_page"
+               type="integer"
+               label="COM_SERVICES_CONFIG_ITEMS_PER_PAGE_LABEL"
+               description="COM_SERVICES_CONFIG_ITEMS_PER_PAGE_DESC"
+               default="12"
+               first="6"
+               last="50"
+               step="6" />
+               
+        <field name="auto_create_service_profile"
+               type="radio"
+               label="COM_SERVICES_CONFIG_AUTO_CREATE_PROFILE_LABEL"
+               description="COM_SERVICES_CONFIG_AUTO_CREATE_PROFILE_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="require_login_to_contact"
+               type="radio"
+               label="COM_SERVICES_CONFIG_REQUIRE_LOGIN_TO_CONTACT_LABEL"
+               description="COM_SERVICES_CONFIG_REQUIRE_LOGIN_TO_CONTACT_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="require_login_to_review"
+               type="radio"
+               label="COM_SERVICES_CONFIG_REQUIRE_LOGIN_TO_REVIEW_LABEL"
+               description="COM_SERVICES_CONFIG_REQUIRE_LOGIN_TO_REVIEW_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="default_service_state"
+               type="list"
+               label="COM_SERVICES_CONFIG_DEFAULT_SERVICE_STATE_LABEL"
+               description="COM_SERVICES_CONFIG_DEFAULT_SERVICE_STATE_DESC"
+               default="0">
+            <option value="0">COM_SERVICES_UNPUBLISHED</option>
+            <option value="1">COM_SERVICES_PUBLISHED</option>
+        </field>
+        
+    </fieldset>
+    
+    <fieldset name="features" 
+              label="COM_SERVICES_CONFIG_FEATURES_LABEL"
+              description="COM_SERVICES_CONFIG_FEATURES_DESC">
+               
+        <field name="enable_reviews"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_REVIEWS_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_REVIEWS_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="auto_approve_reviews"
+               type="radio"
+               label="COM_SERVICES_CONFIG_AUTO_APPROVE_REVIEWS_LABEL"
+               description="COM_SERVICES_CONFIG_AUTO_APPROVE_REVIEWS_DESC"
+               default="0"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="enable_messaging"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_MESSAGING_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_MESSAGING_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="enable_featured"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_FEATURED_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_FEATURED_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="featured_duration_days"
+               type="integer"
+               label="COM_SERVICES_CONFIG_FEATURED_DURATION_LABEL"
+               description="COM_SERVICES_CONFIG_FEATURED_DURATION_DESC"
+               default="30"
+               first="7"
+               last="365"
+               step="7" />
+               
+        <field name="enable_emergency_services"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_EMERGENCY_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_EMERGENCY_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="enable_247_services"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_247_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_247_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+    </fieldset>
+    
+    <fieldset name="display" 
+              label="COM_SERVICES_CONFIG_DISPLAY_LABEL"
+              description="COM_SERVICES_CONFIG_DISPLAY_DESC">
+              
+        <field name="show_ratings"
+               type="radio"
+               label="COM_SERVICES_CONFIG_SHOW_RATINGS_LABEL"
+               description="COM_SERVICES_CONFIG_SHOW_RATINGS_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="show_location"
+               type="radio"
+               label="COM_SERVICES_CONFIG_SHOW_LOCATION_LABEL"
+               description="COM_SERVICES_CONFIG_SHOW_LOCATION_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="show_business_info"
+               type="radio"
+               label="COM_SERVICES_CONFIG_SHOW_BUSINESS_INFO_LABEL"
+               description="COM_SERVICES_CONFIG_SHOW_BUSINESS_INFO_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="show_service_logos"
+               type="radio"
+               label="COM_SERVICES_CONFIG_SHOW_SERVICE_LOGOS_LABEL"
+               description="COM_SERVICES_CONFIG_SHOW_SERVICE_LOGOS_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="default_ordering"
+               type="list"
+               label="COM_SERVICES_CONFIG_DEFAULT_ORDERING_LABEL"
+               description="COM_SERVICES_CONFIG_DEFAULT_ORDERING_DESC"
+               default="rating_avg">
+            <option value="rating_avg">COM_SERVICES_ORDERING_RATING</option>
+            <option value="reviews_count">COM_SERVICES_ORDERING_REVIEWS</option>
+            <option value="created">COM_SERVICES_ORDERING_NEWEST</option>
+            <option value="title">COM_SERVICES_ORDERING_TITLE</option>
+            <option value="location">COM_SERVICES_ORDERING_LOCATION</option>
+            <option value="is_featured">COM_SERVICES_ORDERING_FEATURED</option>
+        </field>
+        
+        <field name="show_empty_states"
+               type="radio"
+               label="COM_SERVICES_CONFIG_SHOW_EMPTY_STATES_LABEL"
+               description="COM_SERVICES_CONFIG_SHOW_EMPTY_STATES_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+    </fieldset>
+    
+    <fieldset name="contact" 
+              label="COM_SERVICES_CONFIG_CONTACT_LABEL"
+              description="COM_SERVICES_CONFIG_CONTACT_DESC">
+              
+        <field name="enable_phone_contact"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_PHONE_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_PHONE_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="enable_email_contact"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_EMAIL_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_EMAIL_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="enable_whatsapp_contact"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_WHATSAPP_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_WHATSAPP_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="enable_website_links"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_WEBSITE_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_WEBSITE_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="contact_rate_limit"
+               type="integer"
+               label="COM_SERVICES_CONFIG_CONTACT_RATE_LIMIT_LABEL"
+               description="COM_SERVICES_CONFIG_CONTACT_RATE_LIMIT_DESC"
+               default="5"
+               first="1"
+               last="50"
+               step="1" />
+               
+    </fieldset>
+    
+    <fieldset name="search" 
+              label="COM_SERVICES_CONFIG_SEARCH_LABEL"
+              description="COM_SERVICES_CONFIG_SEARCH_DESC">
+              
+        <field name="enable_search"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_SEARCH_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_SEARCH_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="enable_category_filter"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_CATEGORY_FILTER_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_CATEGORY_FILTER_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="enable_location_filter"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_LOCATION_FILTER_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_LOCATION_FILTER_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="enable_radius_search"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_RADIUS_SEARCH_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_RADIUS_SEARCH_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="default_search_radius"
+               type="list"
+               label="COM_SERVICES_CONFIG_DEFAULT_SEARCH_RADIUS_LABEL"
+               description="COM_SERVICES_CONFIG_DEFAULT_SEARCH_RADIUS_DESC"
+               default="10">
+            <option value="5">5 km</option>
+            <option value="10">10 km</option>
+            <option value="25">25 km</option>
+            <option value="50">50 km</option>
+            <option value="100">100 km</option>
+        </field>
+        
+        <field name="enable_rating_filter"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_RATING_FILTER_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_RATING_FILTER_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="search_results_limit"
+               type="integer"
+               label="COM_SERVICES_CONFIG_SEARCH_RESULTS_LIMIT_LABEL"
+               description="COM_SERVICES_CONFIG_SEARCH_RESULTS_LIMIT_DESC"
+               default="50"
+               first="10"
+               last="200"
+               step="10" />
+               
+        <field name="custom_categories"
+               type="textarea"
+               label="COM_SERVICES_CONFIG_CUSTOM_CATEGORIES_LABEL"
+               description="COM_SERVICES_CONFIG_CUSTOM_CATEGORIES_DESC"
+               default="Plumbing&#10;Electrical&#10;Construction&#10;Cleaning&#10;Landscaping&#10;HVAC&#10;Painting&#10;Roofing&#10;Automotive&#10;Home Repair&#10;Handyman&#10;Carpentry&#10;Flooring&#10;Pest Control&#10;Security Systems&#10;Moving Services"
+               rows="10"
+               cols="50" />
+               
+    </fieldset>
+    
+    <fieldset name="security" 
+              label="COM_SERVICES_CONFIG_SECURITY_LABEL"
+              description="COM_SERVICES_CONFIG_SECURITY_DESC">
+              
+        <field name="max_file_size"
+               type="integer"
+               label="COM_SERVICES_CONFIG_MAX_FILE_SIZE_LABEL"
+               description="COM_SERVICES_CONFIG_MAX_FILE_SIZE_DESC"
+               default="2"
+               first="1"
+               last="10"
+               step="1"
+               append="MB" />
+               
+        <field name="allowed_file_types"
+               type="text"
+               label="COM_SERVICES_CONFIG_ALLOWED_FILE_TYPES_LABEL"
+               description="COM_SERVICES_CONFIG_ALLOWED_FILE_TYPES_DESC"
+               default="jpg,jpeg,png,gif" />
+               
+        <field name="enable_captcha"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_CAPTCHA_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_CAPTCHA_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="moderate_new_services"
+               type="radio"
+               label="COM_SERVICES_CONFIG_MODERATE_NEW_SERVICES_LABEL"
+               description="COM_SERVICES_CONFIG_MODERATE_NEW_SERVICES_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="spam_protection"
+               type="radio"
+               label="COM_SERVICES_CONFIG_SPAM_PROTECTION_LABEL"
+               description="COM_SERVICES_CONFIG_SPAM_PROTECTION_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="min_review_length"
+               type="integer"
+               label="COM_SERVICES_CONFIG_MIN_REVIEW_LENGTH_LABEL"
+               description="COM_SERVICES_CONFIG_MIN_REVIEW_LENGTH_DESC"
+               default="10"
+               first="5"
+               last="100"
+               step="5" />
+               
+        <field name="max_reviews_per_user_per_day"
+               type="integer"
+               label="COM_SERVICES_CONFIG_MAX_REVIEWS_PER_DAY_LABEL"
+               description="COM_SERVICES_CONFIG_MAX_REVIEWS_PER_DAY_DESC"
+               default="3"
+               first="1"
+               last="20"
+               step="1" />
+               
+        <field name="enable_report_system"
+               type="radio"
+               label="COM_SERVICES_CONFIG_ENABLE_REPORT_SYSTEM_LABEL"
+               description="COM_SERVICES_CONFIG_ENABLE_REPORT_SYSTEM_DESC"
+               default="1"
+               class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+    </fieldset>
+</form>

@@ -1,0 +1,122 @@
+/* Custom Tools - Admin Styles */
+
+/* Page title styling */
+.page-title {
+    color: #2563EB;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #E5E7EB;
+    padding-bottom: 0.5rem;
+}
+
+/* Dashboard cards */
+.card {
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    opacity: 0.8;
+}
+
+/* Statistics cards colors */
+.bg-primary {
+    background: linear-gradient(135deg, #2563EB, #1E40AF) !important;
+}
+
+.bg-success {
+    background: linear-gradient(135deg, #10B981, #059669) !important;
+}
+
+.bg-info {
+    background: linear-gradient(135deg, #06B6D4, #0891B2) !important;
+}
+
+.bg-warning {
+    background: linear-gradient(135deg, #F59E0B, #D97706) !important;
+}
+
+/* List group styling */
+.list-group-item {
+    border-color: #E5E7EB;
+}
+
+.list-group-item:hover {
+    background-color: #F8F9FA;
+}
+
+/* Badges */
+.badge {
+    font-size: 0.75rem;
+}
+
+/* Quick actions buttons */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Toolbar styling */
+.toolbar {
+    margin-bottom: 2rem;
+}
+
+/* Form styling */
+.form-control, .form-select {
+    border: 2px solid #E5E7EB;
+    border-radius: 6px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+/* Table styling */
+.table {
+    border-color: #E5E7EB;
+}
+
+.table th {
+    background-color: #F8F9FA;
+    border-color: #E5E7EB;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Alert styling */
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    color: #92400E;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="JSEARCH_FILTER_LABEL"
+			description="JSEARCH_FILTER_DESC"
+			placeholder="COM_SERVICES_FILTER_SEARCH_CHATS"
+			hint="COM_SERVICES_FILTER_SEARCH_CHATS"
+			class="js-stools-search-string"
+		/>
+
+		<field
+			name="thread_status"
+			type="list"
+			label="COM_SERVICES_FILTER_THREAD_STATUS_LABEL"
+			description="COM_SERVICES_FILTER_THREAD_STATUS_DESC"
+			onchange="this.form.submit();"
+			default=""
+		>
+			<option value="">JOPTION_SELECT_STATUS</option>
+			<option value="read">COM_SERVICES_FILTER_READ_THREADS</option>
+			<option value="unread">COM_SERVICES_FILTER_UNREAD_THREADS</option>
+		</field>
+
+		<field
+			name="message_count"
+			type="list"
+			label="COM_SERVICES_FILTER_MESSAGE_COUNT_LABEL"
+			description="COM_SERVICES_FILTER_MESSAGE_COUNT_DESC"
+			onchange="this.form.submit();"
+			default=""
+		>
+			<option value="">JOPTION_SELECT_MESSAGE_COUNT</option>
+			<option value="1">COM_SERVICES_FILTER_SINGLE_MESSAGE</option>
+			<option value="2-5">COM_SERVICES_FILTER_FEW_MESSAGES</option>
+			<option value="6+">COM_SERVICES_FILTER_MANY_MESSAGES</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC"
+			default="last_message_date DESC"
+			onchange="this.form.submit();"
+		>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="last_message_date DESC">COM_SERVICES_ORDERING_NEWEST_ACTIVITY</option>
+			<option value="last_message_date ASC">COM_SERVICES_ORDERING_OLDEST_ACTIVITY</option>
+			<option value="message_count DESC">COM_SERVICES_ORDERING_MOST_MESSAGES</option>
+			<option value="message_count ASC">COM_SERVICES_ORDERING_LEAST_MESSAGES</option>
+			<option value="unread_count DESC">COM_SERVICES_ORDERING_MOST_UNREAD</option>
+			<option value="service_title ASC">COM_SERVICES_ORDERING_SERVICE_NAME</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+			description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

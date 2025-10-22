@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="user" method="upgrade">
+    <name>plg_user_servicesintegration</name>
+    <element>servicesintegration</element>
+    <creationDate>January 2024</creationDate>
+    <author>JBaylet Development</author>
+    <authorEmail>admin@jbaylet.com</authorEmail>
+    <authorUrl>https://jbaylet.com</authorUrl>
+    <copyright>Copyright (C) 2024 JBaylet Development. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.0.0</version>
+    <description>PLG_USER_SERVICESINTEGRATION_DESCRIPTION</description>
+    
+    <files>
+        <filename plugin="servicesintegration">servicesintegration.php</filename>
+    </files>
+    
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_user_servicesintegration.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_user_servicesintegration.sys.ini</language>
+    </languages>
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="PLG_USER_SERVICESINTEGRATION_BASIC_FIELDSET">
+                
+                <field name="auto_create_profile"
+                       type="radio"
+                       label="PLG_USER_SERVICESINTEGRATION_AUTO_CREATE_PROFILE_LABEL"
+                       description="PLG_USER_SERVICESINTEGRATION_AUTO_CREATE_PROFILE_DESC"
+                       default="1"
+                       class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                
+                <field name="redirect_after_registration"
+                       type="list"
+                       label="PLG_USER_SERVICESINTEGRATION_REDIRECT_AFTER_REG_LABEL"
+                       description="PLG_USER_SERVICESINTEGRATION_REDIRECT_AFTER_REG_DESC"
+                       default="services">
+                    <option value="services">PLG_USER_SERVICESINTEGRATION_REDIRECT_SERVICES</option>
+                    <option value="profile">PLG_USER_SERVICESINTEGRATION_REDIRECT_PROFILE</option>
+                    <option value="dashboard">PLG_USER_SERVICESINTEGRATION_REDIRECT_DASHBOARD</option>
+                    <option value="same_page">PLG_USER_SERVICESINTEGRATION_REDIRECT_SAME</option>
+                </field>
+                
+            </fieldset>
+        </fields>
+    </config>
+</extension>

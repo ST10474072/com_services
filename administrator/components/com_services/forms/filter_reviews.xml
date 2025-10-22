@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="JSEARCH_FILTER_LABEL"
+			description="JSEARCH_FILTER_DESC"
+			placeholder="COM_SERVICES_FILTER_SEARCH_BUSINESSES"
+			hint="COM_SERVICES_FILTER_SEARCH_BUSINESSES"
+			class="js-stools-search-string"
+		/>
+
+		<field
+			name="rating"
+			type="list"
+			label="COM_SERVICES_FILTER_RATING_LABEL"
+			description="COM_SERVICES_FILTER_RATING_DESC"
+			onchange="this.form.submit();"
+			default=""
+		>
+			<option value="">JOPTION_SELECT_RATING</option>
+			<option value="5">COM_SERVICES_FILTER_5_STARS</option>
+			<option value="4">COM_SERVICES_FILTER_4_STARS</option>
+			<option value="3">COM_SERVICES_FILTER_3_STARS</option>
+			<option value="2">COM_SERVICES_FILTER_2_STARS</option>
+			<option value="1">COM_SERVICES_FILTER_1_STAR</option>
+			<option value="no_rating">COM_SERVICES_FILTER_NO_RATING</option>
+		</field>
+
+		<field
+			name="review_status"
+			type="list"
+			label="COM_SERVICES_FILTER_REVIEW_STATUS_LABEL"
+			description="COM_SERVICES_FILTER_REVIEW_STATUS_DESC"
+			onchange="this.form.submit();"
+			default=""
+		>
+			<option value="">JOPTION_SELECT_REVIEW_STATUS</option>
+			<option value="has_reviews">COM_SERVICES_FILTER_HAS_REVIEWS</option>
+			<option value="no_reviews">COM_SERVICES_FILTER_NO_REVIEWS</option>
+			<option value="has_pending">COM_SERVICES_FILTER_HAS_PENDING</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC"
+			default="latest_review_date DESC"
+			onchange="this.form.submit();"
+		>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="latest_review_date DESC">COM_SERVICES_ORDERING_NEWEST_REVIEW</option>
+			<option value="latest_review_date ASC">COM_SERVICES_ORDERING_OLDEST_REVIEW</option>
+			<option value="average_rating DESC">COM_SERVICES_ORDERING_HIGHEST_RATED</option>
+			<option value="average_rating ASC">COM_SERVICES_ORDERING_LOWEST_RATED</option>
+			<option value="total_reviews DESC">COM_SERVICES_ORDERING_MOST_REVIEWS</option>
+			<option value="total_reviews ASC">COM_SERVICES_ORDERING_LEAST_REVIEWS</option>
+			<option value="service_title ASC">COM_SERVICES_ORDERING_BUSINESS_NAME</option>
+			<option value="business_created DESC">COM_SERVICES_ORDERING_NEWEST_BUSINESS</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+			description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

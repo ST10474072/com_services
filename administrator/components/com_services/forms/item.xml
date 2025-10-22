@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="basic" label="COM_SERVICES_ITEM_BASIC_FIELDSET">
+    <field name="id" type="hidden" />
+
+    <field name="title"
+           type="text"
+           label="JGLOBAL_TITLE"
+           required="true"
+           size="60"
+           maxlength="255"/>
+
+    <field name="alias"
+           type="text"
+           label="JFIELD_ALIAS_LABEL"
+           description="JFIELD_ALIAS_DESC"
+           size="50"/>
+
+    <field name="short_description"
+           type="textarea"
+           label="COM_SERVICES_FIELD_SHORT_DESCRIPTION_LABEL"
+           description="COM_SERVICES_FIELD_SHORT_DESCRIPTION_DESC"
+           filter="safehtml"
+           rows="3"
+           cols="60"
+           maxlength="500"/>
+
+    <field name="long_description"
+           type="editor"
+           label="COM_SERVICES_FIELD_LONG_DESCRIPTION_LABEL"
+           description="COM_SERVICES_FIELD_LONG_DESCRIPTION_DESC"
+           filter="safehtml"
+           buttons="true"
+           height="300"/>
+
+    <field name="category_id"
+           type="category"
+           label="JCATEGORY"
+           extension="com_services"
+           required="false"/>
+
+    <field name="logo"
+           type="file"
+           label="COM_SERVICES_FIELD_LOGO_LABEL"
+           description="COM_SERVICES_FIELD_LOGO_DESC"
+           accept="image/*"/>
+
+    <field name="location"
+           type="text"
+           label="COM_SERVICES_FIELD_LOCATION_LABEL"
+           size="60"/>
+
+    <field name="lat"
+           type="number"
+           label="COM_SERVICES_FIELD_LAT_LABEL"
+           step="0.0000001"
+           min="-90"
+           max="90"/>
+
+    <field name="lng"
+           type="number"
+           label="COM_SERVICES_FIELD_LNG_LABEL"
+           step="0.0000001"
+           min="-180"
+           max="180"/>
+
+    <field name="is_featured"
+           type="radio"
+           label="COM_SERVICES_FIELD_FEATURED_LABEL"
+           default="0"
+           class="btn-group btn-group-yesno">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </field>
+
+    <field name="is_247"
+           type="radio"
+           label="COM_SERVICES_FIELD_247_LABEL"
+           default="0"
+           class="btn-group btn-group-yesno">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </field>
+
+    <field name="is_emergency"
+           type="radio"
+           label="COM_SERVICES_FIELD_EMERGENCY_LABEL"
+           default="0"
+           class="btn-group btn-group-yesno">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </field>
+
+    <field name="state"
+           type="list"
+           label="JSTATUS"
+           default="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+    </field>
+  </fieldset>
+
+  <fields name="metadata">
+    <fieldset name="publishing" label="JGLOBAL_FIELDSET_PUBLISHING">
+      <field name="created" type="calendar" label="JGLOBAL_CREATED" showtime="true"/>
+      <field name="created_by" type="user" label="JGLOBAL_FIELD_CREATED_BY_LABEL"/>
+      <field name="modified" type="calendar" label="JGLOBAL_FIELD_MODIFIED_LABEL" showtime="true"/>
+      <field name="modified_by" type="user" label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"/>
+    </fieldset>
+  </fields>
+</form>
